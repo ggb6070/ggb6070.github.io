@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="参考自:想学着制作3Blue1Brown风格的视频吗？先让manim跑起来再说~(不适用最新版本)3Blue1Brown的manim！up主怒花1小时制作安装教程动画库Manim学习笔记——安装与环境配置（一）动画库manim[3b1b]的安装与配置manim官方安装教程">
+<meta name="keywords" content="你好">
+<meta property="og:type" content="article">
+<meta property="og:title" content="manim入门到弃坑---安装">
+<meta property="og:url" content="http://yoursite.com/2019/01/17/如何安装3Blue1Brown的manim数学引擎/index.html">
+<meta property="og:site_name" content="土木阿又的个人博客">
+<meta property="og:description" content="参考自:想学着制作3Blue1Brown风格的视频吗？先让manim跑起来再说~(不适用最新版本)3Blue1Brown的manim！up主怒花1小时制作安装教程动画库Manim学习笔记——安装与环境配置（一）动画库manim[3b1b]的安装与配置manim官方安装教程">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/img/3.jpg">
+<meta property="og:updated_time" content="2019-02-03T13:27:12.328Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="manim入门到弃坑---安装">
+<meta name="twitter:description" content="参考自:想学着制作3Blue1Brown风格的视频吗？先让manim跑起来再说~(不适用最新版本)3Blue1Brown的manim！up主怒花1小时制作安装教程动画库Manim学习笔记——安装与环境配置（一）动画库manim[3b1b]的安装与配置manim官方安装教程">
+<meta name="twitter:image" content="http://yoursite.com/img/3.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/17/如何安装3Blue1Brown的manim数学引擎/"/>
+
+
+
+
+
+  <title>manim入门到弃坑---安装 | 土木阿又的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	<a href="https://github.com/ggb6070"><img
+	style="position: absolute; top: 0; left: 0; border: 0;"
+	src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">土木阿又的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">抬手棋子落  放手江山阔</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-music">
+          <a href="/music/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            音乐
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/17/如何安装3Blue1Brown的manim数学引擎/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ggb">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="土木阿又的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">manim入门到弃坑---安装</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-17T14:11:45+08:00">
+                2019-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>参考自:<br><del><a href="https://www.bilibili.com/read/cv17444" target="_blank" rel="noopener">想学着制作3Blue1Brown风格的视频吗？先让manim跑起来再说~</a></del>(不适用最新版本)<br><a href="https://www.bilibili.com/video/av38126904" target="_blank" rel="noopener">3Blue1Brown的manim！up主怒花1小时制作安装教程</a><br><a href="https://www.bilibili.com/read/cv1570154" target="_blank" rel="noopener">动画库Manim学习笔记——安装与环境配置（一）</a><br><a href="https://www.bilibili.com/read/cv416707" target="_blank" rel="noopener">动画库manim[3b1b]的安装与配置</a><br><a href="https://github.com/3b1b/manim/" target="_blank" rel="noopener">manim官方安装教程</a><br><a id="more"></a> </p>
+<h1 id="一、前提"><a href="#一、前提" class="headerlink" title="一、前提"></a>一、前提</h1><h2 id="本教程仅适用于Windows系统"><a href="#本教程仅适用于Windows系统" class="headerlink" title="本教程仅适用于Windows系统"></a>本教程仅适用于Windows系统</h2><h2 id="懂得使用cmd进入指定位置"><a href="#懂得使用cmd进入指定位置" class="headerlink" title="懂得使用cmd进入指定位置"></a>懂得使用cmd进入指定位置</h2><p>运行cmd：使用快捷键Win+R，弹出运行对话框，输入cmd,回车即可。<br>进入指定位置：<br>例如：用cmd进入D:\3Blue1Brown\manim<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.17134.523]</span><br><span class="line">(c) 2018 Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\asus&gt;d:</span><br><span class="line"></span><br><span class="line">D:\&gt;cd 3Blue1Brown\cc3630\manim</span><br><span class="line"></span><br><span class="line">D:\3Blue1Brown\cc3630\manim&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="确定操作系统的位数"><a href="#确定操作系统的位数" class="headerlink" title="确定操作系统的位数"></a>确定操作系统的位数</h2><p><a href="https://jingyan.baidu.com/article/b907e62784f08446e7891cdc.html" target="_blank" rel="noopener">如何查看电脑是多少位系统 32位和64位怎么看</a></p>
+<h2 id="安装Notepad"><a href="#安装Notepad" class="headerlink" title="安装Notepad++"></a>安装Notepad++</h2><p>使用manim会大量用到文本编辑器打开/修改<code>.py</code>文件，但使用Windows自带的记事本（文本编辑器的一种）会出现问题。<br>下载地址：<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">https://notepad-plus-plus.org/</a></p>
+<h1 id="二、安装python3-7"><a href="#二、安装python3-7" class="headerlink" title="二、安装python3.7"></a>二、安装python3.7</h1><p>截至目前python最新版本是Python 3.7.2<br>详细的python安装教程，参见：<a href="https://blog.csdn.net/weixin_40844416/article/details/80889165" target="_blank" rel="noopener">python安装教程（Windows系统,python3.7为例）</a><br>注意：一定要勾选”Add Python 3.7 to PATH”,使其添加到windows系统环境变量；检查是否安装成功</p>
+<h1 id="三、安装manim源码"><a href="#三、安装manim源码" class="headerlink" title="三、安装manim源码"></a>三、安装manim源码</h1><h2 id="下载源码"><a href="#下载源码" class="headerlink" title="下载源码"></a>下载源码</h2><p>官方源码：<a href="https://github.com/3b1b/manim/" target="_blank" rel="noopener">https://github.com/3b1b/manim/</a><br>第三方源码（推荐）：<a href="https://github.com/cc3630/manim" target="_blank" rel="noopener">https://github.com/cc3630/manim</a><br>这个版本的源码是经过修改的，出现的问题会比较少。<br><img src="/img/3.jpg" alt="3"><br>方法一（推荐）：<br>点击”Clone or Download”<br>选择”Download ZIP”<br>解压即可<br>方法二：<br>使用git安装<br><code>git clone https://github.com/3b1b/manim.git</code></p>
+<h2 id="修改源码"><a href="#修改源码" class="headerlink" title="修改源码"></a>修改源码</h2><p>用Notepad++打开源码根目录下的requirements.txt，删掉其中numpy和scipy所在的行，后面单独安装，否则可能发生错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">error: Microsoft Visual C++ 14.0 is required. Get it with &quot;Microsoft Visual C++ Build Tools&quot;: https://visualstudio.microsoft.com/downloads/</span><br></pre></td></tr></table></figure></p>
+<h2 id="查看格式"><a href="#查看格式" class="headerlink" title="查看格式"></a>查看格式</h2><p>参考自：<a href="https://blog.csdn.net/nnoner/article/details/84997202" target="_blank" rel="noopener">https://blog.csdn.net/nnoner/article/details/84997202</a><br>查看python对应的pip所支持的文件格式<br>运行cmd依次输入:<br><code>python</code><br><code>import pip._internal</code><br><code>print(pip._internal.pep425tags.get_supported())</code><br>结果如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\asus&gt;python</span><br><span class="line">Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)] on win32</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import pip._internal</span><br><span class="line">&gt;&gt;&gt; print(pip._internal.pep425tags.get_supported())</span><br><span class="line">[(&apos;cp37&apos;, &apos;cp37m&apos;, &apos;win_amd64&apos;), (&apos;cp37&apos;, &apos;none&apos;, &apos;win_amd64&apos;), (&apos;py3&apos;, &apos;none&apos;, &apos;win_amd64&apos;), (&apos;cp37&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;cp3&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py37&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py3&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py36&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py35&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py34&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py33&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py32&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py31&apos;, &apos;none&apos;, &apos;any&apos;), (&apos;py30&apos;, &apos;none&apos;, &apos;any&apos;)]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>说明第四步骤要安装cp37-cp37m-win_amd64版本的numpy和scipy</p>
+<h1 id="四、安装numpy和scipy"><a href="#四、安装numpy和scipy" class="headerlink" title="四、安装numpy和scipy"></a>四、安装numpy和scipy</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>numpy下载地址：<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" target="_blank" rel="noopener">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a><br>scipy下载地址：<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy" target="_blank" rel="noopener">http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy</a><br>选择正确的版本下载（可选择最新版本或requirements.txt里对应的版本）<br>根据<code>(&#39;cp37&#39;, &#39;cp37m&#39;, &#39;win_amd64&#39;)</code>可知应选择下载<br>numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl<br>scipy-1.2.0-cp37-cp37m-win_amd64.whl<br>否则出现错误<br><code>numpy-1.16.0+mkl-cp37-cp37m-win32.whl is not a supported wheel on this platform.</code></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>运行cmd<br>先安装numpy模块<br><code>pip install D:\3Blue1Brown\manim-master\numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Processing d:\3blue1brown\manim-master\numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl</span><br><span class="line">Installing collected packages: numpy</span><br><span class="line">  The script f2py.exe is installed in &apos;C:\Users\asus\AppData\Roaming\Python\Python37\Scripts&apos; which is not on PATH.</span><br><span class="line">  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span><br><span class="line">Successfully installed numpy-1.16.0+mkl</span><br></pre></td></tr></table></figure></p>
+<p>参考<a href="https://blog.csdn.net/wtwcsdn123/article/details/81623451" target="_blank" rel="noopener">https://blog.csdn.net/wtwcsdn123/article/details/81623451</a><br>再安装scipy模块<br><code>pip install D:\3Blue1Brown\manim-master\scipy-1.2.0-cp37-cp37m-win_amd64.whl</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\asus&gt;d:</span><br><span class="line">D:\&gt;cd 3Blue1Brown\manim-master</span><br><span class="line">D:\3Blue1Brown\manim-master&gt;pip install scipy-1.2.0-cp37-cp37m-win_amd64.whl</span><br><span class="line">Processing d:\3blue1brown\manim-master\scipy-1.2.0-cp37-cp37m-win_amd64.whl</span><br><span class="line">Requirement already satisfied: numpy&gt;=1.8.2 in c:\users\asus\appdata\roaming\python\python37\site-packages (from scipy==1.2.0) (1.16.0+mkl)</span><br><span class="line">Installing collected packages: scipy</span><br><span class="line">  Found existing installation: scipy 1.1.0</span><br><span class="line">    Uninstalling scipy-1.1.0:</span><br><span class="line">      Successfully uninstalled scipy-1.1.0</span><br><span class="line">Successfully installed scipy-1.2.0</span><br></pre></td></tr></table></figure></p>
+<h1 id="五、安装其他模块"><a href="#五、安装其他模块" class="headerlink" title="五、安装其他模块"></a>五、安装其他模块</h1><p>运行cmd，cd进入manim-master目录<br><code>python -m pip install -r requirements.txt</code><br>自动安装剩余的模块</p>
+<h1 id="六、安装ffmpeg和dvisvgm"><a href="#六、安装ffmpeg和dvisvgm" class="headerlink" title="六、安装ffmpeg和dvisvgm"></a>六、安装ffmpeg和dvisvgm</h1><p>ffmpeg安装参见：<a href="https://blog.csdn.net/a18852867035/article/details/82053611" target="_blank" rel="noopener">https://blog.csdn.net/a18852867035/article/details/82053611</a><br>dvisvgm下载地址：<a href="https://dvisvgm.de/Downloads/" target="_blank" rel="noopener">https://dvisvgm.de/Downloads/</a><br>将两者添加到环境变量，参见：<a href="https://www.bilibili.com/read/cv17444" target="_blank" rel="noopener">想学着制作3Blue1Brown风格的视频吗？先让manim跑起来再说~</a>第五步第3点环境变量的设置</p>
+<h1 id="七、安装miktex"><a href="#七、安装miktex" class="headerlink" title="七、安装miktex"></a>七、安装miktex</h1><p>下载地址：<a href="https://miktex.org/download" target="_blank" rel="noopener">https://miktex.org/download</a><br>安装参见：<a href="https://jingyan.baidu.com/article/48b558e3ffa3667f38c09a99.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/48b558e3ffa3667f38c09a99.html</a><br>其中，选择 “Ask me first”，在以后的使用中如果缺失相关组件，会提醒你安装，也可选择不通知自动安装。如需支持中文，参见：<a href="https://www.bilibili.com/read/cv1570154" target="_blank" rel="noopener">动画库Manim学习笔记——安装与环境配置（一）</a>第四步</p>
+<h1 id="八、检查"><a href="#八、检查" class="headerlink" title="八、检查"></a>八、检查</h1><p>运行cmd,输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python --version：显示Python的版本；</span><br><span class="line">pip list：显示Python模块，包含argparse,colour,numpy,Pillow,progressba,scipy,tqdm,opencv-python,pycairo,pydub；</span><br><span class="line">ffmpeg -version：显示ffmpeg的版本；</span><br><span class="line">dvisvgm --version：显示dvisvgm的版本；</span><br><span class="line">latex --version：显示miktex的版本。</span><br></pre></td></tr></table></figure></p>
+<p>如果有其中一条命令没有正常显示版本信息，则检查相应的安装/配置过程是否有误。</p>
+<h1 id="九、运行"><a href="#九、运行" class="headerlink" title="九、运行"></a>九、运行</h1><p>运行cmd，cd进入manim-master目录<br><code>python -m manim example_scenes.py -pl</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1: OpeningManimExample</span><br><span class="line">2: SquareToCircle</span><br><span class="line">3: UdatersExample</span><br><span class="line">4: WarpSquare</span><br><span class="line">5: WriteStuff</span><br><span class="line"></span><br><span class="line">Choose number corresponding to desired scene/arguments.</span><br><span class="line">(Use comma separated list for multiple entries)</span><br><span class="line">Choice(s):</span><br></pre></td></tr></table></figure></p>
+<p>输入相应的数字，可以渲染出相应场景的视频，自动保存在manim-master目录下会自动新建的video文件夹中<br>运行时出现两个错误及解决<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">错误：</span><br><span class="line">D:\3Blue1Brown\manim&gt;python -m manim example_scenes.py SquareToCircle -pl</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;D:\软件\软件安装\python-3.7.2\lib\runpy.py&quot;, line 193, in _run_module_as_main</span><br><span class="line">    &quot;__main__&quot;, mod_spec)</span><br><span class="line">  File &quot;D:\软件\软件安装\python-3.7.2\lib\runpy.py&quot;, line 85, in _run_code</span><br><span class="line">    exec(code, run_globals)</span><br><span class="line">  File &quot;D:\3Blue1Brown\manim\manim.py&quot;, line 3, in &lt;module&gt;</span><br><span class="line">    import manimlib.extract_scene</span><br><span class="line">  File &quot;D:\3Blue1Brown\manim\manimlib\extract_scene.py&quot;, line 9, in &lt;module&gt;</span><br><span class="line">    from manimlib.scene.scene import Scene</span><br><span class="line">  File &quot;D:\3Blue1Brown\manim\manimlib\scene\scene.py&quot;, line 13, in &lt;module&gt;</span><br><span class="line">    from pydub import AudioSegment</span><br><span class="line">ModuleNotFoundError: No module named &apos;pydub&apos;</span><br><span class="line">解决：</span><br><span class="line">D:\3Blue1Brown\manim&gt;pip install pydub</span><br><span class="line">Collecting pydub</span><br><span class="line">  Using cached https://files.pythonhosted.org/packages/2f/73/bb9c093882d647437a9e6e87c7e6592d2df852f83ffac6f348b878979be0/pydub-0.23.0-py2.py3-none-any.whl</span><br><span class="line">Installing collected packages: pydub</span><br><span class="line">Successfully installed pydub-0.23.0</span><br><span class="line">类似错误的解决方法是安装相应的模块，注意要安装正确的版本</span><br><span class="line">错误版本模块的安装：</span><br><span class="line">D:\3Blue1Brown\manim&gt;pip install readline</span><br><span class="line">Collecting readline</span><br><span class="line">  Downloading https://files.pythonhosted.org/packages/f4/01/2cf081af8d880b44939a5f1b446551a7f8d59eae414277fd0c303757ff1b/readline-6.2.4.1.tar.gz (2.3MB)</span><br><span class="line">    100% |████████████████████████████████| 2.3MB 1.3MB/s</span><br><span class="line">    Complete output from command python setup.py egg_info:</span><br><span class="line">    error: this module is not meant to work on Windows</span><br><span class="line"></span><br><span class="line">    ----------------------------------------</span><br><span class="line">Command &quot;python setup.py egg_info&quot; failed with error code 1 in C:\Users\asus\AppData\Local\Temp\pip-install-b_7oc0vg\readline\</span><br><span class="line">正确版本模块的安装：</span><br><span class="line">D:\3Blue1Brown\manim&gt;python -m pip install pyreadline</span><br><span class="line">Collecting pyreadline</span><br><span class="line">  Downloading https://files.pythonhosted.org/packages/bc/7c/d724ef1ec3ab2125f38a1d53285745445ec4a8f19b9bb0761b4064316679/pyreadline-2.1.zip (109kB)</span><br><span class="line">    100% |████████████████████████████████| 112kB 204kB/s</span><br><span class="line">Installing collected packages: pyreadline</span><br><span class="line">  Running setup.py install for pyreadline ... done</span><br><span class="line">Successfully installed pyreadline-2.1</span><br></pre></td></tr></table></figure></p>
+<p>以上，所有。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/31/游记/" rel="next" title="游记">
+                <i class="fa fa-chevron-left"></i> 游记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="ggb" />
+            
+              <p class="site-author-name" itemprop="name">ggb</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、前提"><span class="nav-number">1.</span> <span class="nav-text">一、前提</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本教程仅适用于Windows系统"><span class="nav-number">1.1.</span> <span class="nav-text">本教程仅适用于Windows系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#懂得使用cmd进入指定位置"><span class="nav-number">1.2.</span> <span class="nav-text">懂得使用cmd进入指定位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#确定操作系统的位数"><span class="nav-number">1.3.</span> <span class="nav-text">确定操作系统的位数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Notepad"><span class="nav-number">1.4.</span> <span class="nav-text">安装Notepad++</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、安装python3-7"><span class="nav-number">2.</span> <span class="nav-text">二、安装python3.7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、安装manim源码"><span class="nav-number">3.</span> <span class="nav-text">三、安装manim源码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载源码"><span class="nav-number">3.1.</span> <span class="nav-text">下载源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改源码"><span class="nav-number">3.2.</span> <span class="nav-text">修改源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看格式"><span class="nav-number">3.3.</span> <span class="nav-text">查看格式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、安装numpy和scipy"><span class="nav-number">4.</span> <span class="nav-text">四、安装numpy和scipy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">4.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">4.2.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、安装其他模块"><span class="nav-number">5.</span> <span class="nav-text">五、安装其他模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、安装ffmpeg和dvisvgm"><span class="nav-number">6.</span> <span class="nav-text">六、安装ffmpeg和dvisvgm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、安装miktex"><span class="nav-number">7.</span> <span class="nav-text">七、安装miktex</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、检查"><span class="nav-number">8.</span> <span class="nav-text">八、检查</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、运行"><span class="nav-number">9.</span> <span class="nav-text">九、运行</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ggb</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
